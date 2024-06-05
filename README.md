@@ -3,6 +3,8 @@
 ## Overview of the project and its purpose
 For our project we have decided to take a deep dive into diseases. 
 What we have found are some fascinating discoveries.
+With ........ different views, we are able to share our data story.
+We have answered three different questions in our pr
 ...................................
 
 ## Instructions on how to use and interact with the project
