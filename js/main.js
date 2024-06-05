@@ -1,7 +1,7 @@
 // Make a chloropleth map using Leaflet
 const buildMap = selection => {
     // Load data with D3
-    d3.json('./gz_2010_us_040_00_5m.json').then((data) => {
+    d3.json('../data/state_outlines.json').then((data) => {
         death_counts_by_state = data.metadata[selection]
 
         // Color selector
