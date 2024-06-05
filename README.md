@@ -4,7 +4,8 @@
 For our project we have decided to take a deep dive into diseases. 
 What we have found are some fascinating discoveries.
 With ........ different views, we are able to share our data story.
-We have answered three different questions in our pr
+Our dataset was based on research done throughout the United States on different diseases.
+We have answered three different questions in our prject, such as:.............
 ...................................
 
 ## Instructions on how to use and interact with the project
