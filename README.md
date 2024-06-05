@@ -21,4 +21,4 @@ We got all our data from this link:
 https://data.cdc.gov/NCHS/Weekly-Provisional-Counts-of-Deaths-by-State-and-S/muzy-jte6/about_data
 
 ## References for any code used that is not your own
-All of the code that we have used is our own.
+Some code for the Leaflet chloropleth map was borrowed from https://leafletjs.com/examples/choropleth/
