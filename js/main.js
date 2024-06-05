@@ -4,14 +4,9 @@ const buildMap = selection => {
     d3.json('./gz_2010_us_040_00_5m.json').then((data) => {
         death_counts_by_state = data.metadata[selection]
 
-        const chromaScale = (max) => {
-            chroma.scale(['#fef0d9', '#b30000']).domain([0, max]);
-        }
-
         // Color selector
         const colorPicker = (count, count_array) => {
-            // const scale = chromaScale(count_array.max);
-            return chroma.scale(['#fef0d9', '#b30000']).domain([0, count_array.max])(count);
+            return chroma.scale(['#fef0d9', '#b30000']).domain([0, Math.max(...count_array)])(count);
         }
 
         // Styling changes when highlighted
@@ -26,6 +21,11 @@ const buildMap = selection => {
             });
 
             layer.bringToFront();
+
+            info.update({
+                state: layer.feature.properties.NAME,
+                count: layer.feature.properties[selection]
+            });
         }
 
         // Function to apply highlight styling
@@ -39,6 +39,7 @@ const buildMap = selection => {
         // Reset styling changes when un-highlighted
         const resetHighlight = e => {
             geojson.resetStyle(e.target);
+            info.update()
         }
 
         // Styling function for chloropleth map
@@ -68,6 +69,23 @@ const buildMap = selection => {
             onEachFeature: onEachFeature
         }).addTo(map);
 
+        const info = L.control({position: 'topright'});
+
+        info.onAdd = map => {
+            this._div = L.DomUtil.create('div', 'info');
+            return this._div
+        }
+
+        info.update = props => {
+            this._div.innerHTML = props ?
+            (`<h4>Deaths by ${selection}</h4>` +
+            `<b>${props.state}</b></br>` +
+            `Total deaths: ${props.count}`) :
+            'Hover over a state';
+        }
+
+        info.addTo(map);
+
     }).catch(error => console.log(error))
 }
 
@@ -85,6 +103,10 @@ const buildLine = selection => {
 
 // Event handler on <select> element to re-build maps every time user selects a new disease
 const handleChange = selection => {
+    const container = L.DomUtil.get('map');
+      if(container != null){
+        container._leaflet_id = null;
+    }
     buildMap(selection);
     buildBar(selection);
     buildLine(selection);
