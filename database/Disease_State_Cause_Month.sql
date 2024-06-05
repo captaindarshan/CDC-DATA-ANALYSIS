@@ -46,5 +46,4 @@ CREATE TABLE StateDiseases_2023 (
 	PRIMARY KEY(State_of_Occurrence)
 );
 
-SELECT * FROM StateDiseases_2023;
 
