@@ -12,6 +12,7 @@
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js" integrity="sha512-zInFF17qBFVvvvFpIfeBzo7Tj7+rQxLeTJDmbxjBz5/zIr89YVbTNelNhdTT+/DCrxoVzBeUPVFJsczKbB7sew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.plot.ly/plotly-2.32.0.min.js" charset="utf-8"></script>
     </head>
     <body>
         <h1>CDC Data Analysis 2020-2023</h1>
@@ -33,8 +34,10 @@
             <option value="COVID-19 (Underlying Cause of Death)">COVID-19</option>
         </select>
         <div id="map"></div>
-        <div id="bar"></div>
-        <div id="line"></div>
+        <div id="graph-holder">
+            <div id="bar"></div>
+            <div id="line"></div>
+        </div>
         <script src="./js/main.js" async defer></script>
     </body>
 </html>
