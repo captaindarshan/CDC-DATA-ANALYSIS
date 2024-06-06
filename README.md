@@ -32,3 +32,4 @@ https://data.cdc.gov/NCHS/Weekly-Provisional-Counts-of-Deaths-by-State-and-S/muz
 
 ## References for any code used that is not your own
 Some code for the Leaflet chloropleth map was borrowed from https://leafletjs.com/examples/choropleth/
+Used to reference axis labeling: https://plotly.com/javascript/axes/ 
