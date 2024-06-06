@@ -1,11 +1,12 @@
 # RU-DATA-SCIENCE-PROJECT-3-SS_AL_MM_DP
 
 ## Overview of the project and its purpose
-For our project we have decided to take a deep dive into diseases. 
-What we have found are some fascinating discoveries.
+Our project takes a deep dive into diseases. 
+We have found some fascinating discoveries.
 With ........ different views, we are able to share our data story.
 Our dataset was based on research done throughout the United States on different diseases.
 We have answered three different questions in our prject, such as:.............
+We created an interactive map of the USA that accurately portrays our data story.
 ...................................
 
 ## Instructions on how to use and interact with the project
