@@ -93,13 +93,96 @@ buildMap('All Cause');
 
 // Make a bar chart using Chart.js
 const buildBar = selection => {
+    d3.csv('../data/2023_Count_of_Death_by_State.csv').then(data => {
+        let deathCounts = [];
+        for (let i = 0; i < data.length; i++) {
+            if (data[i]['Jurisdiction of Occurrence'] !== 'United States') {
+                deathCounts.push({
+                    count: data[i][selection],
+                    state: data[i]['Jurisdiction of Occurrence']
+                });
+            }
+        }
 
+        let sortedDeathCounts = deathCounts.sort((a, b) => b.count - a.count).slice(0, 10);
+
+        let counts = [];
+        let states = [];
+
+        for (let i = 0; i < sortedDeathCounts.length; i++) {
+            counts.push(sortedDeathCounts[i].count);
+            states.push(sortedDeathCounts[i].state);
+        }
+
+        let barTrace = {
+            x: states,
+            y: counts,
+            type: 'bar'
+        }
+
+        let barData = [ barTrace ];
+
+        let barLayout = {
+            title: {
+                text: `Deaths by ${selection} (2023, top 10 states)`
+            },
+            xaxis: {
+                title: {
+                    text: 'State'
+                }
+            },
+            yaxis: {
+                title: {
+                    text: 'Death Count'
+                }
+            }
+        }
+
+        Plotly.newPlot('bar', barData, barLayout);
+    }).catch(error => console.log(error));
 }
+
+buildBar('All Cause');
 
 // Make a line graph using Chart.js
 const buildLine = selection => {
+    // Load data with d3
+     d3.csv('../data/2023_Count_of_Death_by_State_and_Month.csv').then(data => {
+        let deathCounts = [];
+        for (let i = 0; i < data.length; i++) {
+            if (data[i]['Jurisdiction of Occurrence'] === 'United States') {
+                deathCounts.push(data[i][selection]);
+            }
+        }
 
+        let lineTrace = {
+            x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
+            y: deathCounts,
+            type: 'scatter'
+        }
+
+        let lineLayout = {
+            title: {
+                text: `Deaths by ${selection} (January - August 2023)`
+            },
+            xaxis: {
+                title: {
+                    text: 'Month'
+                }
+            },
+            yaxis: {
+                title: {
+                    text: 'Death Count'
+                }
+            }
+        }
+
+        let lineData = [ lineTrace ];
+        Plotly.newPlot('line', lineData, lineLayout);
+     }).catch(error => console.log(error));
 }
+
+buildLine('All Cause');
 
 // Event handler on <select> element to re-build maps every time user selects a new disease
 const handleChange = selection => {
