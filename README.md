@@ -10,16 +10,23 @@ We created an interactive heat map of the USA that accurately portrays our data 
 We started with cleaning up the database, and narrowing down the diseases to the top........
 with that information, we created different databases that show several target aspects of our story.
 .............................................
+
 our first step was creating a map, allowing the user to choose a disease and look at it state by state.
+
 ...............................
+
 Our second Visualization is a line graph which shows an accurate picture of the amount of ...........
+
 ...................
+
 For our last graph we chose a bar graph so one can see in depth the disease according to the month.................
+
 .................................
 ...................................
 
 ## Instructions on how to use and interact with the project
 If you click on this link: ............... you will be able to find our visualization for the project.
+
 ............................
 
 ## Summarize ethical considerations made in the project
@@ -32,4 +39,5 @@ https://data.cdc.gov/NCHS/Weekly-Provisional-Counts-of-Deaths-by-State-and-S/muz
 
 ## References for any code used that is not your own
 Some code for the Leaflet chloropleth map was borrowed from https://leafletjs.com/examples/choropleth/
+
 Used to reference axis labeling: https://plotly.com/javascript/axes/ 
