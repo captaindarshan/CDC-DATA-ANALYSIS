@@ -3,11 +3,15 @@
 ## Overview of the project and its purpose
 Our project takes a deep dive into diseases. 
 We have found some fascinating discoveries.
-With ........ different views, we are able to share our data story.
+With 3 different visualisations, we are able to share our data story.
 Our dataset was based on research done throughout the United States on different diseases.
-We have answered three different questions in our prject, such as:.............
+We had some questions that we were curious about when reading the dataset:
+- How prevalent are certain diseases in each state and over time?
+- For each disease, which ten states had the highest death count?
+- Does a certain month have more or less deaths due to a certain disease?
+- What are the amount of deaths per capita for a certain disease?
 We created an interactive heat map of the USA that accurately portrays our data story.
-We started with cleaning up the database, and narrowing down the diseases to the top........
+We started with cleaning up the database, and narrowing down the diseases.
 with that information, we created different databases that show several target aspects of our story.
 .............................................
 
