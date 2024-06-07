@@ -1,3 +1,6 @@
+// Container for our Leaflet map - allows us to call map.remove() in the update function
+let map;
+
 // Make a chloropleth map using Leaflet
 const buildMap = selection => {
     // Load data with D3
@@ -7,6 +10,18 @@ const buildMap = selection => {
         // Color selector
         const colorPicker = (count, count_array) => {
             return chroma.scale(['#fef0d9', '#b30000']).domain([0, Math.max(...count_array)])(count);
+        }
+
+        // Styling function for chloropleth map
+        const style = feature => {
+            return {
+                fillColor: colorPicker(feature.properties[selection], death_counts_by_state),
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7
+            }
         }
 
         // Styling changes when highlighted
@@ -28,6 +43,12 @@ const buildMap = selection => {
             });
         }
 
+        // Reset styling changes when un-highlighted
+        const resetHighlight = e => {
+            geojson.resetStyle(e.target);
+            info.update()
+        }
+
         // Function to apply highlight styling
         const onEachFeature = (feature, layer) => {
             layer.on({
@@ -36,26 +57,8 @@ const buildMap = selection => {
             })
         }
 
-        // Reset styling changes when un-highlighted
-        const resetHighlight = e => {
-            geojson.resetStyle(e.target);
-            info.update()
-        }
-
-        // Styling function for chloropleth map
-        const style = feature => {
-            return {
-                fillColor: colorPicker(feature.properties[selection], death_counts_by_state),
-                weight: 2,
-                opacity: 1,
-                color: 'white',
-                dashArray: '3',
-                fillOpacity: 0.7
-            }
-        }
-
         // Create map
-        const map = L.map('map').setView([37.8, -96], 4);
+        map = L.map('map').setView([37.8, -96], 4);
 
         // Add base layer
         tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -69,13 +72,16 @@ const buildMap = selection => {
             onEachFeature: onEachFeature
         }).addTo(map);
 
+        // Add info box
         const info = L.control({position: 'topright'});
 
+        // Create a div when the info box is added
         info.onAdd = map => {
             this._div = L.DomUtil.create('div', 'info');
             return this._div
         }
 
+        // Set HTML of info box div whenever it is updated
         info.update = props => {
             this._div.innerHTML = props ?
             (`<h4>Deaths by ${selection}</h4>` +
@@ -95,6 +101,7 @@ buildMap('All Cause');
 const buildBar = selection => {
     d3.csv('../data/2023_Count_of_Death_by_State.csv').then(data => {
         let deathCounts = [];
+        // Collect an array of every death count for the selected disease and pair them with their states
         for (let i = 0; i < data.length; i++) {
             if (data[i]['Jurisdiction of Occurrence'] !== 'United States') {
                 deathCounts.push({
@@ -104,6 +111,7 @@ const buildBar = selection => {
             }
         }
 
+        // Sort death counts in descending order and pick the top 10
         let sortedDeathCounts = deathCounts.sort((a, b) => b.count - a.count).slice(0, 10);
 
         let counts = [];
@@ -150,6 +158,7 @@ const buildLine = selection => {
      d3.csv('../data/2023_Count_of_Death_by_State_and_Month.csv').then(data => {
         let deathCounts = [];
         for (let i = 0; i < data.length; i++) {
+            // Push all country-wide death counts for the selected disease into an array
             if (data[i]['Jurisdiction of Occurrence'] === 'United States') {
                 deathCounts.push(data[i][selection]);
             }
@@ -186,10 +195,7 @@ buildLine('All Cause');
 
 // Event handler on <select> element to re-build maps every time user selects a new disease
 const handleChange = selection => {
-    const container = L.DomUtil.get('map');
-      if(container != null){
-        container._leaflet_id = null;
-    }
+    map.remove();
     buildMap(selection);
     buildBar(selection);
     buildLine(selection);
