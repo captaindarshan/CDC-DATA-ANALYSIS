@@ -86,7 +86,7 @@ const buildMap = selection => {
             this._div.innerHTML = props ?
             (`<h4>Deaths by ${selection}</h4>` +
             `<b>${props.state}</b></br>` +
-            `Total deaths: ${props.count}`) :
+            `Total deaths per 100k: ${props.count}`) :
             'Hover over a state';
         }
 
@@ -132,7 +132,7 @@ const buildBar = selection => {
 
         let barLayout = {
             title: {
-                text: `Deaths by ${selection} (2023, top 10 states)`
+                text: `Deaths by ${selection} per 100k people <br /> (2023, top 10 states)`
             },
             xaxis: {
                 title: {
@@ -172,7 +172,7 @@ const buildLine = selection => {
 
         let lineLayout = {
             title: {
-                text: `Deaths by ${selection} (January - August 2023)`
+                text: `Deaths by ${selection} per 100k people <br />(January - August 2023)`
             },
             xaxis: {
                 title: {
