@@ -34,9 +34,7 @@ If you click on this link: ............... you will be able to find our visualiz
 ............................
 
 ## Summarize ethical considerations made in the project
-In our project we were cautious regarding ethical considertions. 
-The data set that we used is from the the CDC, which allows the use of data provided on their website.
-
+In our project we were cautious regarding ethical considertions. We were careful to look at the permissions that stated whether we were allowed to use the data, and how. The data set that we used is from the the CDC, which allows the use of data provided on their website at no cost and no restrictions. This was helpful as websites with stricter ways to use the data, would be more difficult to use.
 ## References for the data source(s)
 We got all our data from this link:
 https://data.cdc.gov/NCHS/Weekly-Provisional-Counts-of-Deaths-by-State-and-S/muzy-jte6/about_data
