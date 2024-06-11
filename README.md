@@ -15,10 +15,15 @@ We created an interactive heat map of the USA that accurately portrays our data 
 We started with cleaning up the database, and narrowing down the diseases.
 with that information, we created different databases that show several target aspects of our story.
 our first step was creating a map, allowing the user to choose a disease and look at it state by state.
+
 ![image](https://github.com/captaindarshan/RU-DATA-SCIENCE-PROJECT-3-SS_AL_MM_DP/assets/159741871/7338ea7e-df5e-42fc-8f24-83b27f40ac6d)
+
 Our second Visualization is a line graph which shows an accurate picture of the top ten states effected by the chosen diseaes.
+
 ![image](https://github.com/captaindarshan/RU-DATA-SCIENCE-PROJECT-3-SS_AL_MM_DP/assets/159741871/b328a014-a6af-4710-a162-2f6dac3b8d49)
+
 For our last graph we chose a bar graph so one can see in depth the disease according to the months of the year.
+
 ![image](https://github.com/captaindarshan/RU-DATA-SCIENCE-PROJECT-3-SS_AL_MM_DP/assets/159741871/5e72a003-bfa9-40f6-b66b-96973a5c008a)
 ## Instructions on how to use and interact with the project
 If you click on this link: (https://captaindarshan.github.io/RU-DATA-SCIENCE-PROJECT-3-SS_AL_MM_DP/) 
