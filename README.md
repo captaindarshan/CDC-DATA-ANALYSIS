@@ -9,7 +9,7 @@ We had some questions that we were curious about when reading the dataset:
 - How prevalent are certain diseases in each state and over time?
 - For each disease, which ten states had the highest death count?
 - Does a certain month have more or less deaths due to a certain disease?
-- What are the amount of deaths per capita for a certain disease?
+- What are the amount of deaths per 100k for a certain disease?
   
 We created an interactive heat map of the USA that accurately portrays our data story.
 We started with cleaning up the database, and narrowing down the diseases.
