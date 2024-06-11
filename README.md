@@ -9,34 +9,29 @@ We had some questions that we were curious about when reading the dataset:
 - How prevalent are certain diseases in each state and over time?
 - For each disease, which ten states had the highest death count?
 - Does a certain month have more or less deaths due to a certain disease?
-- What are the amount of deaths per capita for a certain disease?
+  
 We created an interactive heat map of the USA that accurately portrays our data story.
 We started with cleaning up the database, and narrowing down the diseases.
 with that information, we created different databases that show several target aspects of our story.
-.............................................
-
 our first step was creating a map, allowing the user to choose a disease and look at it state by state.
 
-...............................
+![image](https://github.com/captaindarshan/RU-DATA-SCIENCE-PROJECT-3-SS_AL_MM_DP/assets/159741871/7338ea7e-df5e-42fc-8f24-83b27f40ac6d)
 
-Our second Visualization is a line graph which shows an accurate picture of the amount of ...........
+Our second Visualization is a line graph which shows an accurate picture of the top ten states effected by the chosen diseaes.
 
-...................
+![image](https://github.com/captaindarshan/RU-DATA-SCIENCE-PROJECT-3-SS_AL_MM_DP/assets/159741871/b328a014-a6af-4710-a162-2f6dac3b8d49)
 
-For our last graph we chose a bar graph so one can see in depth the disease according to the month.................
+For our last graph we chose a bar graph so one can see in depth the disease according to the months of the year.
 
-.................................
-...................................
+![image](https://github.com/captaindarshan/CDC-DATA-ANALYSIS/assets/159741444/2fc9d444-a7b0-4221-9a98-41cbf6981b18)
 
 ## Instructions on how to use and interact with the project
-If you click on this link: ............... you will be able to find our visualization for the project.
-
-............................
+If you click on this link: (https://captaindarshan.github.io/CDC-DATA-ANALYSIS/) 
+you will be able to find our visualization for the project, where you would right away see a map and a dropdown option. 
+If you scroll down the page you will be able to see two other visualizations. There is a bar graph showing the top ten states, as well as a visualisation for the month. To interact with the data, click on the dropdown menu to choose a disease and you will see how each chart shares a different aspect of the data story. 
 
 ## Summarize ethical considerations made in the project
-In our project we were cautious regarding ethical considertions. 
-The data set that we used is from the the CDC, which allows the use of data provided on their website.
-
+In our project we were cautious regarding ethical considertions. We were careful to look at the permissions that stated whether we were allowed to use the data, and how. The data set that we used is from the the CDC, which allows the use of data provided on their website at no cost and no restrictions. This was helpful as websites with stricter ways to use the data, would be more difficult to use.
 ## References for the data source(s)
 We got all our data from this link:
 https://data.cdc.gov/NCHS/Weekly-Provisional-Counts-of-Deaths-by-State-and-S/muzy-jte6/about_data

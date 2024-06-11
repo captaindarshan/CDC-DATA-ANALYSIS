@@ -4,7 +4,7 @@ let map;
 // Make a chloropleth map using Leaflet
 const buildMap = selection => {
     // Load data with D3
-    d3.json('../data/state_outlines.json').then((data) => {
+    d3.json('data/state_outlines.json').then((data) => {
         death_counts_by_state = data.metadata[selection]
 
         // Color selector
@@ -99,7 +99,7 @@ buildMap('All Cause');
 
 // Make a bar chart using Chart.js
 const buildBar = selection => {
-    d3.csv('../data/2023_Count_of_Death_by_State.csv').then(data => {
+    d3.csv('data/2023_Count_of_Death_by_State.csv').then(data => {
         let deathCounts = [];
         // Collect an array of every death count for the selected disease and pair them with their states
         for (let i = 0; i < data.length; i++) {
@@ -155,7 +155,7 @@ buildBar('All Cause');
 // Make a line graph using Chart.js
 const buildLine = selection => {
     // Load data with d3
-     d3.csv('../data/2023_Count_of_Death_by_State_and_Month.csv').then(data => {
+     d3.csv('data/2023_Count_of_Death_by_State_and_Month.csv').then(data => {
         let deathCounts = [];
         for (let i = 0; i < data.length; i++) {
             // Push all country-wide death counts for the selected disease into an array
