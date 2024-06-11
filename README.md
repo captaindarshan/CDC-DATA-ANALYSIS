@@ -29,7 +29,7 @@ For our last graph we chose a bar graph so one can see in depth the disease acco
 ...................................
 
 ## Instructions on how to use and interact with the project
-If you click on this link: ............... you will be able to find our visualization for the project.
+If you click on this link: (https://captaindarshan.github.io/RU-DATA-SCIENCE-PROJECT-3-SS_AL_MM_DP/) you will be able to find our visualization for the project.
 
 ............................
 
