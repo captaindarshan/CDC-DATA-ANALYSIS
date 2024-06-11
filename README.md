@@ -14,12 +14,8 @@ We had some questions that we were curious about when reading the dataset:
 We created an interactive heat map of the USA that accurately portrays our data story.
 We started with cleaning up the database, and narrowing down the diseases.
 with that information, we created different databases that show several target aspects of our story.
-.............................................
-
 our first step was creating a map, allowing the user to choose a disease and look at it state by state.
-
-...............................
-
+![image](https://github.com/captaindarshan/RU-DATA-SCIENCE-PROJECT-3-SS_AL_MM_DP/assets/159741871/968902dd-16bc-4ac0-8b81-c0bcc0d5d27a)
 Our second Visualization is a line graph which shows an accurate picture of the amount of ...........
 
 ...................
