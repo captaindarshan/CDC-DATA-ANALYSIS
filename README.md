@@ -29,9 +29,9 @@ For our last graph we chose a bar graph so one can see in depth the disease acco
 ...................................
 
 ## Instructions on how to use and interact with the project
-If you click on this link: (https://captaindarshan.github.io/RU-DATA-SCIENCE-PROJECT-3-SS_AL_MM_DP/) you will be able to find our visualization for the project.
-
-............................
+If you click on this link: (https://captaindarshan.github.io/RU-DATA-SCIENCE-PROJECT-3-SS_AL_MM_DP/) 
+you will be able to find our visualization for the project, where you would right away see a map and a dropdown option. 
+If you scroll down the page you will be able to see two other visualizations. There is a bar graph showing the top ten states, as well as a visualisation for the month. To interact with the data, click on the dropdown menu to choose a disease and you will see how each chart shares a different aspect of the data story. 
 
 ## Summarize ethical considerations made in the project
 In our project we were cautious regarding ethical considertions. We were careful to look at the permissions that stated whether we were allowed to use the data, and how. The data set that we used is from the the CDC, which allows the use of data provided on their website at no cost and no restrictions. This was helpful as websites with stricter ways to use the data, would be more difficult to use.
